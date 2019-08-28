@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.esraa.movieapp.Models.Movies;
+
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -48,7 +50,6 @@ public class OkhttpActivity extends AppCompatActivity {
                     public void onResponse(Call call, Response response) throws IOException {
                         if (response.isSuccessful()) {
                             final String myResponse = response.body().string();
-
 
                             OkhttpActivity.this.runOnUiThread(new Runnable() {
                                 @Override
